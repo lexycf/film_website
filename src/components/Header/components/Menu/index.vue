@@ -1,10 +1,9 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal"
-   active-text-color="#df0e62" @select="handleSelect">
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router @select="handleSelect">
     <template v-for="item in menuList">
       <el-sub-menu :index="item.index" v-if="item.children">
         <template #title>{{ item.name }}</template>
-        <el-menu-item :index="item2.index" v-for="item2 in item.children">{{ item2.name }}</el-menu-item>
+        <el-menu-item :index="item2.path" :class="[$route.path==item2.path?'active':'']" v-for="item2 in item.children">{{ item2.name }}</el-menu-item>
       </el-sub-menu>
       <el-menu-item :index="item.index" v-else>{{ item.name }}</el-menu-item>
 
@@ -15,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-const activeIndex = ref('1')
+const activeIndex = ref('Home')
 const menuList = [
   {
     index: '1',

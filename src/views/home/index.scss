@@ -85,7 +85,7 @@
     .recommendTitle {
         font-size: larger;
         display: flex;
-        color: #0c0f0a;
+        color: $themeFontColor;
         span {
             display: block;
             flex: 1;
@@ -126,12 +126,12 @@
             }
 
             .moviesName {
-                color:#0c0f0a;
                 font-size: .875rem;
                 text-align: center;
                 line-height: 1.5;
                 margin-bottom: 0;
                 padding-top: 0.5rem;
+                color:$themeFontColor;
             }
         }
 

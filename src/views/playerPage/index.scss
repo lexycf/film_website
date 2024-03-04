@@ -12,7 +12,7 @@
 
 .subTitle{
     display: flex;
-    color: #0c0f0a;
+    color:$themeFontColor;
     // align-items: center;
     margin: 0.8rem 0;
 
@@ -31,13 +31,13 @@
             display: inline-block;
             padding: 0.1rem 0.6rem;
             margin: 0.4rem 0.6rem;
-            border: 1px solid #0c0f0a;
+            border: 1px solid $themeFontColor;
             border-radius: 0.2rem;
             cursor: pointer;
             &.active{
-                background:#df0e62;
-                color:#fff;
-                border: 1px solid #df0e62;
+                background:$themeFontActiveColor;
+                color:$themeFontColor;
+                border: 1px solid $themeFontActiveColor;
             }
         }
     }
@@ -51,30 +51,43 @@
     display: flex;
 
     .imgShow {
-        width: 40%;
         background: rgba(0, 0, 0, 0.1);
+        img{
+            display:block;
+            width: 100%;
+        }
     }
-
+    @media (min-width: 300px) {
+        .imgShow {
+            width: 40%;
+            flex: 0 0 40%;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .imgShow {
+            width: 12%;
+            flex: 0 0 12%;
+        }
+    }
+    
     .videoIntro {
         font-size: 1rem;
-        color: #0c0f0a;
+        color:$themeFontColor;
         margin-left: 1rem;
-
-        .videoName {}
-
+        flex:1;
         .videoSei {
             padding: 0.5rem 0;
         }
-
-        .videoDesc {}
-
-        .videoGenre {}
+        .videoGenre{
+            padding-top:2rem;
+        }
     }
 }
 
 .videoSeiBox {
     display: flex;
-    color: #0c0f0a;
+    color:$themeFontColor;
     // align-items: center;
     margin: 0.8rem 0;
 
@@ -91,13 +104,13 @@
             display: inline-block;
             padding: 0.3rem 0.8rem;
             margin: 0.2rem 0.6rem;
-            border: 1px solid #0c0f0a;
+            border: 1px solid $themeFontColor;
             cursor: pointer;
             border-radius: 0.2rem;
             &.active{
-                background:#df0e62;
-                color:#fff;
-                border: 1px solid #df0e62;
+                background:$themeFontActiveColor;
+                color:$themeFontColor;
+                border: 1px solid $themeFontActiveColor;
             }
         }
     }

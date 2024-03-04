@@ -15,9 +15,8 @@ import headerTpl from '@/components/Header/index.vue';
 import FooterTpl from '@/components/Footer/index.vue';
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .el-main{
   padding:0;
 }
-@import './styles/common.scss';
 </style>

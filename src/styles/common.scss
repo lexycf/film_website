@@ -1,0 +1,38 @@
+$themeBgColor: #0c0f0a; //主题背景色
+$themeFontColor: #fff; //主题字体颜色
+$themeFontActiveColor: #df0e62; //字体avtive下的颜色
+$themeBorderColor:#fff;
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': $themeFontActiveColor //#37C2BC
+    ),
+  ),
+  $menu:(
+    'active-color': $themeFontActiveColor,
+    'text-color':$themeFontColor,
+    'bg-color':$themeBgColor,
+    'border-color':#999,
+  ),
+);
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font: 400 1rem/1.5625rem sans-serif;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    background: $themeBgColor;
+}
+
+.clears {
+    clear: both;
+}
+
+.moviesShow {
+    cursor: pointer;
+}

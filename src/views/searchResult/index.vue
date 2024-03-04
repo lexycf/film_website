@@ -2,7 +2,7 @@
     <div class="searchResult">
         <div class="categoryPageTit"><span>{{ resultLabel }}</span></div>
         <div class="categoryList">
-            <div class="categoryItem moviesShow" v-for="item in moviesList">
+            <div class="categoryItem moviesShow" v-for="item in moviesList" @click="handleLink(item)">
                 <div class="moviesImgs">
                     <img :src="item.imagen" alt="" class="image">
                     <div class="aired">{{ item.aired }}</div>
@@ -15,12 +15,15 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { ajaxSearchApi } from '@/api/index'
-const $route = useRoute();
-let keyword=$route.query.keyword;
-let resultLabel=ref('ACTIONS');
-resultLabel.value=keyword;
+import { useCommonStore } from '@/store/commonStore'
+const commonStore = useCommonStore()
+const $route = useRoute(),
+    $router = useRouter();
+let keyword = $route.query.keyword;
+let resultLabel = ref('ACTIONS');
+resultLabel.value = keyword;
 let moviesList = ref([
     {
         "itemId": 1,
@@ -45,11 +48,19 @@ let moviesList = ref([
 ])
 
 const getResult = async () => {
-    const res = await ajaxSearchApi({keyword});
+    const res = await ajaxSearchApi({ keyword });
     moviesList.value = res.slice(0, 36);
     console.log(res);
 }
 getResult();
+
+const handleLink = (item: any) => {
+    commonStore.set_playerInfo(item);
+    $router.push({
+        path: 'playerPage',
+        query: { id: item.id }
+    })
+}
 </script>
 <style lang="scss">
 @import './index.scss';

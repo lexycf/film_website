@@ -3,11 +3,11 @@ import './style.css'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router'
-
+import pinia from './store'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+pinia.use(piniaPluginPersistedstate)
 import 'swiper/css';
-import "video.js/dist/video-js.css";
-import videojs from "video.js";
-
 createApp(App)
     .use(router)
+    .use(pinia)
     .mount('#app')
