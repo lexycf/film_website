@@ -17,7 +17,7 @@ import { ref } from 'vue'
 const activeIndex = ref('Home')
 const menuList = [
   {
-    index: '1',
+    index: 'Home',
     name: 'Home',
     path:'Home'
   },
@@ -28,83 +28,83 @@ const menuList = [
       {
         index: '2-1',
         name: 'Acción',
-        path:'category'
+        path:'category?genres=Acción'
       },
       {
         index: '2-2',
         name: 'Animación',
-        path:'category'
+        path:'category?genres=Animación'
       },
       {
         index: '2-3',
         name: 'Aventura',
-        path:'category'
+        path:'category?genres=Aventura'
       },
       {
         index: '2-4',
         name: 'Biografico',
-        path:'category'
+        path:'category?genres=Biografico'
       },
       {
         index: '2-5',
         name: 'Ciencia Ficción',
-        path:'category'
+        path:'category?genres=Ciencia Ficción'
       },
       {
         index: '2-6',
         name: 'Comedia',
-        path:'category'
+        path:'category?genres=Comedia'
       },
       {
         index: '2-7',
         name: 'Crimen',
-        path:'category'
+        path:'category?genres=Crimen'
       },
       {
         index: '2-8',
         name: 'Documental',
-        path:'category'
+        path:'category?genres=Documental'
       },
       {
         index: '2-9',
         name: 'Drama',
-        path:'category'
+        path:'category?genres=Drama'
       },
       {
         index: '2-10',
         name: 'Familiar',
-        path:'category'
+        path:'category?genres=Familiar'
       },
 
       {
         index: '2-11',
         name: 'Fantasía',
-        path:'category'
+        path:'category?genres=Fantasía'
       },
       {
         index: '2-12',
         name: 'Misterio',
-        path:'category'
+        path:'category?genres=Misterio'
       },
       {
         index: '2-13',
         name: 'Música',
-        path:'category'
+        path:'category?genres=Música'
       },
       {
         index: '2-14',
         name: 'Romance',
-        path:'category'
+        path:'category?genres=Romance'
       },
       {
         index: '2-15',
         name: 'Terror',
-        path:'category'
+        path:'category?genres=Terror'
       },
       {
         index: '2-16',
         name: 'Thriller',
-        path:'category'
+        path:'category?genres=Thriller'
       },
     ]
   },
@@ -115,7 +115,7 @@ const menuList = [
       {
         index: '3-1',
         name: 'peliculas',
-        path:'category'
+        path:'category?type=movie&tag=peliculas'
       },
     ]
   },
@@ -126,37 +126,37 @@ const menuList = [
       {
         index: '4-1',
         name: 'en-emision',
-        path:'category'
+        path:'category?type=tv&tag=en-emision'
       },
       {
         index: '4-2',
         name: 'finalizado',
-        path:'category'
+        path:'category?type=tv&tag=finalizado'
       },
       {
         index: '4-3',
         name: 'dia',
-        path:'category'
+        path:'category?type=tv&tag=dia'
       },
       {
         index: '4-4',
         name: 'semana',
-        path:'category'
+        path:'category?type=tv&tag=semana'
       },
       {
         index: '4-5',
         name: 'mes',
-        path:'category'
+        path:'category?type=tv&tag=mes'
       },
       {
         index: '4-6',
         name: 'estrenos',
-        path:'category'
+        path:'category?type=tv&tag=estrenos'
       },
       {
         index: '4-7',
         name: 'peliculas',
-        path:'category'
+        path:'category?type=tv&tag=peliculas'
       },
     ]
 
@@ -164,9 +164,6 @@ const menuList = [
 ]
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
-}
-const handleRouter=()=>{
-
 }
 </script>
 
