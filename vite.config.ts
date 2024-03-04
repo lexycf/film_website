@@ -8,7 +8,6 @@ import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import path from 'path'
 import { resolve } from 'path';
-import Inspect from 'vite-plugin-inspect'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -42,7 +41,6 @@ export default defineConfig({
     Icons({
       autoInstall: true,
     }),
-    Inspect(),
     // 压缩文件
     viteCompression({
       verbose: true,
