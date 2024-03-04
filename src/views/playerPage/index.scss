@@ -1,0 +1,105 @@
+.playerPage {
+    margin: 2rem 1rem;
+}
+
+.videoBox {
+    width: 100%;
+}
+
+.videoNotice {
+    padding: 0.4rem 0;
+}
+
+.subTitle{
+    display: flex;
+    color: #0c0f0a;
+    // align-items: center;
+    margin: 0.8rem 0;
+
+    .titLabel {
+        font-size: 1.2rem;
+        width: 6.8rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-top:0.4rem;
+    }
+
+    .titleVals {
+        font-size: 0.9rem;
+        flex:1;
+        span {
+            display: inline-block;
+            padding: 0.1rem 0.6rem;
+            margin: 0.4rem 0.6rem;
+            border: 1px solid #0c0f0a;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            &.active{
+                background:#df0e62;
+                color:#fff;
+                border: 1px solid #df0e62;
+            }
+        }
+    }
+
+}
+
+
+.videoIntroduce {
+    border-top: 1px solid #c5c5c0;
+    padding-top: 1.8rem;
+    display: flex;
+
+    .imgShow {
+        width: 40%;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .videoIntro {
+        font-size: 1rem;
+        color: #0c0f0a;
+        margin-left: 1rem;
+
+        .videoName {}
+
+        .videoSei {
+            padding: 0.5rem 0;
+        }
+
+        .videoDesc {}
+
+        .videoGenre {}
+    }
+}
+
+.videoSeiBox {
+    display: flex;
+    color: #0c0f0a;
+    // align-items: center;
+    margin: 0.8rem 0;
+
+    .titLabel {
+        font-size: 1.2rem;
+        width: 6.8rem;
+        padding-top:0.4rem;
+    }
+
+    .titleVals {
+        font-size: 0.9rem;
+        flex: 1;
+        span {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem 0.6rem;
+            border: 1px solid #0c0f0a;
+            cursor: pointer;
+            border-radius: 0.2rem;
+            &.active{
+                background:#df0e62;
+                color:#fff;
+                border: 1px solid #df0e62;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+.categoryPage {
+    margin: 2rem 1rem;
+}
+
+.categoryPageTit {
+    display: flex;
+    align-items: center;
+
+    span {
+        display: inline-block;
+        font-size: 2rem;
+        color: #0c0f0a;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
+}
+
+.categoryList {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .categoryItem {
+        padding: 0 0.3rem;
+        margin: 1rem 0;
+        box-sizing: border-box;
+
+        .moviesImgs {
+            //height:12rem;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            object-position: 50% 50% !important;
+        }
+
+        .moviesName {
+            color: #0c0f0a;
+            font-size: .875rem;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 0;
+            padding-top: 0.5rem;
+            white-space: pre-wrap;
+        }
+    }
+
+   
+
+}
+
+.el-pagination {
+    margin: 0 auto;
+    float: right;
+}

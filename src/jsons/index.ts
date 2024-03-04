@@ -1,0 +1,1 @@
+export const movies_category=['Acción', 'Animación', 'Aventura', 'Biografico', 'Ciencia Ficción', 'Comedia', 'Crimen', 'Documental', 'Drama', 'Familiar', 'Fantasía', 'Misterio', 'Música', 'Romance', 'Terror', 'Thriller']

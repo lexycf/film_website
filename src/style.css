@@ -1,0 +1,32 @@
+html,body{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    margin: 0;
+    font: 400 1rem/1.5625rem sans-serif;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    color:#0c0f0a;
+}
+.clears{
+    clear: both;
+}
+.moviesShow{
+    cursor: pointer;
+}
+@media (min-width: 300px) {
+    .moviesShow {
+        width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .moviesShow {
+        width: 16.6%;
+        flex: 16.6%;
+    }
+}
+
