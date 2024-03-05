@@ -12,6 +12,14 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
+    path: '/',
+    name: 'main',
+    component: () => import('@/views/home/index.vue'),
+    meta: {
+      title: 'home'
+    }
+  },
+  {
     path: '/category',
     name: 'category',
     component: () => import('@/views/categoryPage/index.vue'),

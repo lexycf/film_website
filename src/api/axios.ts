@@ -10,7 +10,7 @@ interface ResponseData {
 }
 // 创建axios实例
 export const service = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL,
+  baseURL: import.meta.env.VITE_API_DOMAIN,
   timeout: 10000, // 请求超时时间
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
